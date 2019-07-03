@@ -1,14 +1,21 @@
 import React from 'react';
-import Table from '../../components/Table';
+import { useSelector } from 'react-redux';
+
+import { ApplicationState } from '../../store';
+
 import { Header, Container, Main } from './styles';
+import ListPlans from '../../components/ListPlans';
 
-const FaleMais = () => (
-  <Container>
-    <Header> Planos Fale Mais</Header>
-    <Main>
-      <Table />
-    </Main>
-  </Container>
-);
+export default function FaleMais() {
+  const plans = useSelector((state:ApplicationState) => state.plans.data);
+  const prices = useSelector((state:ApplicationState) => state.prices.data);
 
-export default FaleMais;
+  return (
+    <Container>
+      <Header> Planos Fale Mais</Header>
+      <Main>
+        <ListPlans plans={plans} prices={prices} />
+      </Main>
+    </Container>
+  );
+}
