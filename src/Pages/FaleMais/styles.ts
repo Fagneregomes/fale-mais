@@ -5,7 +5,7 @@ export const Container = styled.main``;
 export const Main = styled.main`
   width: 100%;
   max-width: 980px;
-  margin: 0 auto;
+  margin: 15px auto;
   padding: 0 30px;
 `;
 
