@@ -21,7 +21,7 @@ import {
 
 import { Price } from '../../store/ducks/Prices/types';
 import { Prefix } from '../../store/ducks/Prefixes/types';
-import PrimaryButton from '../../components/Common/PrimaryButton';
+import PrimaryButton from '../Common/PrimaryButton';
 
 const schema = Yup.object().shape({
   origin: Yup.string().required('Origem é obrigatório.'),

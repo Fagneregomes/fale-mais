@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export interface Theme {
   theme: {
@@ -17,6 +17,13 @@ export interface Theme {
     },
   };
 }
+
+export const Main = styled.main`
+  width: 100%;
+  max-width: 980px;
+  margin: 15px auto;
+  padding: 0 30px;
+`;
 
 const GlobalStyles = createGlobalStyle`
   body {
