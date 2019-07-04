@@ -5,6 +5,8 @@
    LOAD_REQUEST = '@plans/LOAD_REQUEST',
    LOAD_SUCCESS = '@plans/LOAD_SUCCESS',
    LOAD_FAILURE = '@plans/LOAD_FAILURE',
+
+   SET_PLAN = '@plans/SET_PLAN'
  }
 
 /**

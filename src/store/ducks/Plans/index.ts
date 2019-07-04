@@ -47,6 +47,9 @@ const reducer: Reducer<PlansState> = (state = INITIAL_STATE, action) => {
       ...state, loading: false, error: true, data: [],
       };
 
+    case PlansTypes.SET_PLAN:
+      return { ...state, data: [...state.data, action.payload] };
+
     default:
       return state;
   }
