@@ -1,9 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-// import { Container } from './styles';
+import CadPrice from '../../components/CadPrice';
+import { ApplicationState } from '../../store';
 
-export default function CadPrice() {
+export default function Price() {
+  const prices = useSelector((state:ApplicationState) => state.prices.data);
   return (
-    <h1>CadPrice</h1>
+    <CadPrice prices={prices} />
   );
 }
